@@ -25,9 +25,9 @@
     description: The NFS version to use
     type: enum
     required: true
-    default: nfsvers=3
+    default: nfsvers=4
     options:
-    - nfsvers=3
+    - nfsvers=4
   - variable: RANCHER_DEBUG
     label: Debug Mode
     type: enum
