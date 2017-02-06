@@ -2,4 +2,7 @@ name: Convoy NFS
 description: |
   Docker Volume Manager for NFS-backed Volumes
 version: v0.4.0
-category: Rancher Services
+category: Storage
+labels:
+  io.rancher.certified: rancher
+  io.rancher.orchestration.supported: 'cattle,mesos,swarm'
