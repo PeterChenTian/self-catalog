@@ -2,7 +2,7 @@ version: '2'
 services:
   gluster-driver:
     privileged: true
-    image: 10.1.241.80:5000/rancher/storage-gluster:p1
+    image: 10.1.241.80:5000/rancher/storage-gluster:p2
     pid: host
     labels:
       io.rancher.scheduler.global: 'true'
