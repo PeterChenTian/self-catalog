@@ -2,7 +2,7 @@ version: '2'
 services:
   gluster-driver:
     privileged: true
-    image: 10.1.241.80:5000/rancher/storage-gluster:p2
+    image: 10.1.241.80:5000/rancher/storage-gluster:p3
     pid: host
     labels:
       io.rancher.scheduler.global: 'true'
@@ -10,6 +10,7 @@ services:
       io.rancher.container.agent.role: environment
     environment:
       GLUSTER_SERVER: '${GLUSTER_SERVER}'
+      MOUNT_VOL: '${MOUNT_VOL}'
     volumes:
     - /var/run:/var/run
     - /dev:/host/dev

@@ -11,6 +11,11 @@
     label: "GLUSTER Server"
     required: true
     type: "string"
+  - variable: "MOUNT_VOL"
+    label: "Mount Volume"
+    description: "The volume on the Glusterfs server to mount"
+    type: "string"
+    required: true
   - variable: RANCHER_DEBUG
     label: Debug Mode
     type: enum
