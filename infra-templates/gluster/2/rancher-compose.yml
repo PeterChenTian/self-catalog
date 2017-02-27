@@ -1,32 +1,21 @@
 .catalog:
-  name: "Rancher NFS"
+  name: "Rancher Gluster"
   version: "0.2.2"
   description: |
-    Docker volume plugin for NFS
-  minimum_rancher_version: v1.4.0-rc1
+    Docker volume plugin for GLUSTERFS
+  minimum_rancher_version: v1.1.99
+  maximum_rancher_version: v1.3.99
   questions:
-  - variable: "NFS_SERVER"
-    description: "IP or hostname of the NFS Server"
-    label: "NFS Server"
+  - variable: "GLUSTER_SERVER"
+    description: "IP or hostname of the glusterfs Server"
+    label: "GLUSTER Server"
     required: true
     type: "string"
-  - variable: "MOUNT_DIR"
-    label: "Mount Directory"
-    description: "The directory on the NFS server to mount"
+  - variable: "MOUNT_VOL"
+    label: "Mount Volume"
+    description: "The volume on the Glusterfs server to mount"
     type: "string"
     required: true
-  - variable: "MOUNT_OPTS"
-    label: "Mount Options"
-    description: "Comma delimited list of mount options, for example: 'proto=udp'. Do not specify `nfsvers` option, it will be ignored."
-    type: "string"
-  - variable: "NFS_VERS"
-    label: NFS Version
-    description: The NFS version to use
-    type: enum
-    required: true
-    default: nfsvers=4
-    options:
-    - nfsvers=4
   - variable: RANCHER_DEBUG
     label: Debug Mode
     type: enum
@@ -35,8 +24,8 @@
     options:
     - true
     - false
-nfs-driver:
+gluster-driver:
   storage_driver:
-    name: rancher-nfs
+    name: rancher-gluster
     scope: environment
     volume_access_mode: multiHostRW
