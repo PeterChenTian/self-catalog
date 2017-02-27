@@ -1,7 +1,7 @@
 name: Rancher Gluster
 description: |
   Docker volume plugin for gluster.
-version: 0.2.1
+version: 0.2.2
 category: Storage
 labels:
   io.rancher.certified: Experimental
